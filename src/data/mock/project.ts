@@ -10,5 +10,5 @@ export const MOCK_PROJECT: MiningProject = {
   secondaryCommodity: 'Silver (Ag)',
   currentPhase: 'Stage 2 Open Pit Operations & CIP Plant Ramp-Up',
   operationalStatus: 'Active Operations',
-  reportingDate: '2026-10-18T00:00:00.000Z',
+  reportingDate: new Date().toISOString(),
 };

@@ -85,7 +85,7 @@ export const ExecutiveReportsPage: React.FC = () => {
           </div>
 
           <div className="text-right text-xs text-slate-500">
-            <span className="block font-semibold text-slate-800">Generated: 18 Oct 2026</span>
+            <span className="block font-semibold text-slate-800">Generated: {formatDate(new Date(), 'dd MMM yyyy')}</span>
             <span className="block">Author: Executive Board Office</span>
           </div>
         </div>

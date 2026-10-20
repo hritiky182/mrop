@@ -43,14 +43,14 @@ export function formatPercent(val: number, decimals: number = 1, showSign: boole
 /**
  * Format ISO date string into readable mining standard format: 14 Oct 2026
  */
-export function formatDate(dateStr: string | undefined | null, formatStr: string = 'dd MMM yyyy'): string {
-  if (!dateStr) return '—';
+export function formatDate(date: Date | string | undefined | null, formatStr: string = 'dd MMM yyyy'): string {
+  if (!date) return '—';
   try {
-    const parsed = parseISO(dateStr);
-    if (!isValid(parsed)) return dateStr;
+    const parsed = typeof date === 'string' ? parseISO(date) : date;
+    if (!isValid(parsed)) return String(date);
     return format(parsed, formatStr);
   } catch {
-    return dateStr;
+    return String(date);
   }
 }
 

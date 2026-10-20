@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { exportToCsv } from '@/utils/exportCsv';
+import { formatDate } from '@/utils/formatters';
 import { Printer, Download, Calendar, Wrench, Activity } from 'lucide-react';
 
 export const EngineeringReportsPage: React.FC = () => {
-  const [shift, setShift] = useState('Shift Handover: Day Shift 18 Oct 2026');
+  const [shift, setShift] = useState(`Shift Handover: Day Shift ${formatDate(new Date(), 'dd MMM yyyy')}`);
 
   const maintenanceLog = [
     { asset: 'HT-204', category: 'Haul Trucks', type: 'Emergency', technician: 'Steve Kowalski', status: 'In Progress (Hydraulic flush & seal replacement)' },
