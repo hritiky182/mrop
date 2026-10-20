@@ -1,0 +1,77 @@
+import { FinancialOverview, ProductionTrendPoint } from '@/types';
+
+export const MOCK_FINANCIAL_OVERVIEW: FinancialOverview = {
+  totalRevenueYtdAud: 142_850_000,
+  operatingCostYtdAud: 78_420_000,
+  equipmentRepairCostsYtdAud: 14_860_000,
+  fuelEnergyCostAud: 22_450_000,
+  laborCostAud: 25_120_000,
+  processingCostAud: 11_350_000,
+  otherOpexAud: 4_640_000,
+  allInSustainingCostAiscPerOzAud: 1_684,
+  goldRealizedPricePerOzAud: 3_645,
+  costBreakdown: [
+    { category: 'Labor & Field Crews', amountAud: 25_120_000, percentage: 32.0 },
+    { category: 'Fuel & Grid Power', amountAud: 22_450_000, percentage: 28.6 },
+    { category: 'Equipment Maintenance & Repairs', amountAud: 14_860_000, percentage: 19.0 },
+    { category: 'Milling & Reagents Processing', amountAud: 11_350_000, percentage: 14.5 },
+    { category: 'Camp Logistics & Overhead', amountAud: 4_640_000, percentage: 5.9 },
+  ],
+};
+
+export const MOCK_PRODUCTION_TREND: ProductionTrendPoint[] = [
+  {
+    month: 'May 2026',
+    actualGoldOz: 5820,
+    targetGoldOz: 5500,
+    actualOreTonnes: 192_000,
+    targetOreTonnes: 185_000,
+    actualRevenueAud: 21_213_900,
+    operatingCostAud: 11_820_000,
+  },
+  {
+    month: 'Jun 2026',
+    actualGoldOz: 6140,
+    targetGoldOz: 6000,
+    actualOreTonnes: 204_000,
+    targetOreTonnes: 195_000,
+    actualRevenueAud: 22_380_300,
+    operatingCostAud: 12_410_000,
+  },
+  {
+    month: 'Jul 2026',
+    actualGoldOz: 6490,
+    targetGoldOz: 6200,
+    actualOreTonnes: 210_000,
+    targetOreTonnes: 200_000,
+    actualRevenueAud: 23_656_050,
+    operatingCostAud: 12_980_000,
+  },
+  {
+    month: 'Aug 2026',
+    actualGoldOz: 6310,
+    targetGoldOz: 6500,
+    actualOreTonnes: 205_000,
+    targetOreTonnes: 210_000,
+    actualRevenueAud: 23_000_000,
+    operatingCostAud: 13_150_000,
+  },
+  {
+    month: 'Sep 2026',
+    actualGoldOz: 7120,
+    targetGoldOz: 6800,
+    actualOreTonnes: 228_000,
+    targetOreTonnes: 215_000,
+    actualRevenueAud: 25_952_400,
+    operatingCostAud: 13_820_000,
+  },
+  {
+    month: 'Oct 2026 (MTD)',
+    actualGoldOz: 7310,
+    targetGoldOz: 7000,
+    actualOreTonnes: 234_000,
+    targetOreTonnes: 220_000,
+    actualRevenueAud: 26_644_950,
+    operatingCostAud: 14_240_000,
+  },
+];
